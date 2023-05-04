@@ -1,11 +1,18 @@
-import React, { useContext, useState } from 'react';
-import { Link } from "react-router-dom";
+import React, { useContext, } from 'react';
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { AuthContext } from '../../../provider/AuthProviders';
 
 const Login = () => {
     const {signIn, googleLogin, githubLogin} = useContext(AuthContext);
     
+    
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    console.log('login page location', location)
+    const from = location.state?.from?.pathname || '/'
+
 
     const handleLogin = event => {
         event.preventDefault();
@@ -19,6 +26,7 @@ const Login = () => {
         .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser);
+            navigate(from, {replace: true})
         })
         .catch(error => console.log(error))
     }
@@ -31,7 +39,7 @@ const Login = () => {
     }
 
     return (
-        <div className='container mx-auto bg-cyan-200 rounded-lg py-2'>
+        <div className='container mx-auto bg-purple-300 rounded-lg py-2'>
             <h3 className=' w-80 py-2 mt-2 mx-auto text-purple-100 font-bold text-lg rounded-lg bg-purple-900 text-center'>Please Login</h3>
             <form onSubmit={handleLogin}  className="form-control w-full max-w-xs mx-auto">
 

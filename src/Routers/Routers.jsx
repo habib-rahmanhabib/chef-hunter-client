@@ -1,10 +1,15 @@
 import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import { Navigate, createBrowserRouter } from 'react-router-dom';
 import Main from '../Layout/Main';
 import Home from '../pages/Home/Home/Home';
 import Login from '../pages/Login/Login/Login';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import Register from '../pages/Login/Register/Register';
+import Blogs from '../pages/Blogs/Blogs';
+import Details from '../pages/Details/Details';
+import DetailsLayout from '../Layout/DetailsLayout';
+import PrivateRoute from './PrivateRoute';
+import About from '../pages/About/About';
 
 const router = createBrowserRouter ([
     {
@@ -14,7 +19,9 @@ const router = createBrowserRouter ([
         children:[
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                
+                loader: ({params}) => fetch('https://food-buz-server-chef.vercel.app/chefs')
             },
             {
                 path: '/login',
@@ -23,9 +30,32 @@ const router = createBrowserRouter ([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/blogs',
+                element: <Blogs></Blogs>
+            },
+            {
+                path: '/about',
+                element: <About></About>
+            }
+           
+        ]
+    },
+    {
+        path:'/',
+        element: <DetailsLayout></DetailsLayout>,
+        errorElement: <ErrorPage></ErrorPage>,
+        children: [
+            {
+                path: '/:id',
+                element: <PrivateRoute><Details></Details></PrivateRoute>,
+                loader: ({params}) => fetch(`https://food-buz-server-chef.vercel.app/${params.id}`)
             }
         ]
     }
+    
+   
 ]) 
 
 export default router;
