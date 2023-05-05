@@ -7,7 +7,7 @@ const ErrorPage = () => {
         <section className='flex items-center h-screen p-16 bg-purple-100 text-purple-900'>
       <div className='container flex flex-col items-center justify-center px-5 mx-auto my-8'>
         <div className='rounded-lg'>
-          <img className='rounded-full' src='https://c8.alamy.com/comp/2H83G2H/gamer-play-game-on-gaming-pc-with-joypad-modern-gaming-setup-with-water-cooling-case-joypad-mouse-headset-2H83G2H.jpg' alt="" />
+          <img className='rounded-full' src={img} alt="" />
         </div>
         <div className='max-w-md text-center'>
           <h2 className='mb-8 font-extrabold text-9xl text-purple-600'>
