@@ -17,8 +17,8 @@ const Details = () => {
                 <h2 className="card-title"><span className='text-red-400 font-bold'> Chef-Name: </span>{name}</h2>
                 <p className='text-slate-100'><span className='text-red-400 font-bold'> Short-Description: </span>{description}</p>
                 <p className='text-purple-200'><span className='text-red-400 font-bold'> Total Recipes: </span>{recipes_numbers} items</p>
-                <p className='text-purple-200'><span className='text-red-400 font-bold'> Experience: </span>{ experience_years} Years</p>
-                <p className=' flex gap-2' ><span className='text-red-400 font-bold'> Total-Likes: </span> <span className='flex gap-1 text-purple-200'>{ likes} </span> </p>
+                <p className='bg-orange-100'><span className='text-red-400 font-bold'> Experience: </span>{ experience_years} Years</p>
+                <p className=' flex gap-2' ><span className='text-red-400 font-bold'> Total-Likes: </span> <span className='flex gap-1 text- -200'>{ likes} </span> </p>
                                     
             </div>
             </div>

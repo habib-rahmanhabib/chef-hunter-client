@@ -5,7 +5,7 @@ const ActiveLink =({to, children}) => {
         <NavLink
             to={to}
             className={({isActive, isPending})=>
-            isActive ? "text-purple-500 p-2 rounded-lg bg-purple-200" : isPending ? "pending" : ""
+            isActive ? "text-amber-200 p-2 rounded-lg bg-purple-200" : isPending ? "pending" : ""
         }
         >
             {children}

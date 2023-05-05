@@ -13,9 +13,9 @@ const Header = () => {
             .catch(error => console.log(error));
     }
     return (
-        <div className=' bg-purple-400  py-3 px-2'>
+        <div className=' bg-lime-200  py-3 px-2'>
 
-            <div className="navbar bg-purple-600 rounded-2xl ">
+            <div className="navbar bg-lime-600 rounded-2xl ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -32,7 +32,7 @@ const Header = () => {
                             <li><ActiveLink to='/about'>About</ActiveLink></li>
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost normal-case text-2xl"><span className=' text-yellow-300'>C</span>hef  <span className=' text-red-600 pl-2'> B</span>azar</Link>
+                    <Link to='/' className="btn btn-ghost normal-case text-2xl"><span className="text-red-500">F</span>ood<span className='text-yellow-300'>B</span>uz  <span className='text-red-500'>C</span>hef</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-white">

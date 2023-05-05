@@ -15,7 +15,7 @@ const Home = () => {
     return (
         <div className=''>
             <Marquee speed={100} className='text-center '>
-                <h1 className='  text-3xl py-2 animate-text bg-gradient-to-r from-teal-400  via-amber-500  to-orange-400 bg-clip-text text-transparent font-extrabold'>Food is not only for eat It's a Fashion </h1>
+                <h1 className='  text-3xl py-2 animate-text bg-gradient-to-r from-teal-200  via-amber-200  to-orange-200 bg-clip-text text-transparent font-extrabold'>Food is Good for helth and pession some people </h1>
             </Marquee>
             <Marquee speed={200} className="carousel w-full rounded-lg">
                 <div id="item1" className="carousel-item w-full">

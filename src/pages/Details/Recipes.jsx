@@ -23,7 +23,7 @@ const  Recipes = ({recipe}) => {
                     <h2 className="card-title"><span className='text-sky-800 font-bold'> {recipes_name}</span> </h2>
 
 
-                <div className='mt-3  text-yellow-400'>
+                <div className='mt-3  text-teal-500'>
                     <h5 className='text-white font-bold'>Cooking Methood</h5>
                     <hr/>
                     <p>1. {cooking[0]}</p>
@@ -33,7 +33,7 @@ const  Recipes = ({recipe}) => {
                     
                 </div>
 
-                <div className='mt-3 text-yellow-400'>
+                <div className='mt-3 text-teal-500'>
                     <h5 className='text-white font-bold'>Ingredients</h5>
                     <hr />
                     <p>1. {ingredients[0]}</p>
