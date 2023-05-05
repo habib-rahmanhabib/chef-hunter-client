@@ -24,7 +24,7 @@ const  Recipes = ({recipe}) => {
 
 
                 <div className='mt-3  text-teal-500'>
-                    <h5 className='text-white font-bold'>Cooking Methood</h5>
+                    <h5 className='text-black font-bold'>Cooking Methood</h5>
                     <hr/>
                     <p>1. {cooking[0]}</p>
                     <p>2. {cooking[1]}</p>
@@ -34,7 +34,7 @@ const  Recipes = ({recipe}) => {
                 </div>
 
                 <div className='mt-3 text-teal-500'>
-                    <h5 className='text-white font-bold'>Ingredients</h5>
+                    <h5 className='text-black font-bold'>Ingredients</h5>
                     <hr />
                     <p>1. {ingredients[0]}</p>
                     <p>2. {ingredients[1]}</p>
