@@ -10,7 +10,7 @@ const Footer = () => {
     
   </div> 
   <div>
-    <span className="footer-title">Service</span> 
+    <span className="footer-title">Services</span> 
     <a className="link link-hover">Branding</a> 
     <a className="link link-hover">Design</a> 
     <a className="link link-hover">Marketing</a> 
