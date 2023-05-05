@@ -1,10 +1,12 @@
-import React, { useContext, } from 'react';
+import React, { useContext, useState, } from 'react';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { AuthContext } from '../../../provider/AuthProviders';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Login = () => {
     const {signIn, googleLogin, githubLogin} = useContext(AuthContext);
+    const [error, setError] = useState('')
 
 
     const navigate = useNavigate();
@@ -18,6 +20,9 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
+        if(password.length <6){
+            toast.error('please type atleast 6 cheracter!')
+        }
 
         // console.log(email, password)
 
@@ -29,8 +34,12 @@ const Login = () => {
             const loggedUser = result.user;
             console.log(loggedUser);
             navigate(from, {replace: true})
+            toast.success('Successfully login!')
+            setError('')
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+            setError('no match email and password')
+        })
     }
     const handleGoogleSignIn = () => {
         googleLogin()
@@ -56,7 +65,7 @@ const Login = () => {
 
                 </label>
                 <input type="password"  name='password' placeholder="Type here" required className="input input-bordered w-full max-w-xs" />
-
+<p>{error}</p>
 
                 <button className='btn btn-accent mt-2' type='submit'>Login</button>
 
